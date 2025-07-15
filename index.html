@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sitio web de ejemplo con productos, reseñas y formulario de contacto.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, productos, contacto, reseñas">
+  <meta name="author" content="Lucas Bernardo">
+  <title>Mi Sitio Web</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Mi Sitio Web</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#reseñas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#carrito">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenido</h2>
+      <p>Descripción breve del sitio.</p>
+      <img src="img/bienvenidos.jpg" alt="Letrero de bienvenida en neón azul" width="640" height="480">
+    </section>
+
+    <section id="productos" class="productos">
+      <h2>Productos</h2>
+      <div class="cards" id="productos-container">
+        <!-- Productos desde la API se cargan aquí -->
+      </div>
+    </section>
+
+    <section id="reseñas" class="reseñas">
+      <h2>Reseñas</h2>
+      <div class="grid">
+        <div>Reseña 1</div>
+        <div>Reseña 2</div>
+        <div>Reseña 3</div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="form-contacto" action="https://formspree.io/f/mvgannqg" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+        <p id="mensaje-envio"></p>
+      </form>
+    </section>
+
+    <section id="carrito">
+      <h2>Carrito</h2>
+      <div id="carrito-items"></div>
+      <p>Total: $<span id="carrito-total">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Mi Sitio Web</p>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video"></iframe>
+  </footer>
+
+</body>
+</html>
